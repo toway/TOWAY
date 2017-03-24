@@ -1,0 +1,106 @@
+/**index.wxss**/
+
+
+.activity-item {
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-top: 3rpx solid #D3D3D3;
+}
+
+
+
+.user-info{
+  width: 100%;
+}
+.user-info > view {
+   display: inline-block;
+}
+
+.organizer {
+  color: #A1CDBE;
+  font-family: '楷体';
+  font-weight: 800;
+}
+
+.release-time, .activity-time, .activity-address{
+  color: #D3D3D3;
+  font-size: 28rpx;
+  font-family: '楷体';
+  font-weight: 600;
+}
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+  border-radius: 50%;
+  /*background-image: url('/images/icon.png');*/
+  background-size: cover;
+}
+
+.avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.activity-status {
+  float: right;
+  /*position: relative;
+  right:0;*/
+}
+
+.activity-content {
+  box-sizing: border-box;
+  margin-top: 28rpx;
+}
+.activity-content > view{
+  display: inline-block;
+}
+
+.activity-right{
+  width: 62%;
+}
+
+.activity-show {
+  width: 35%;
+  height: 250rpx;
+  background-image: url('/images/activity-show.png');
+  margin-right: 16rpx;
+}
+
+.right-title{
+  font-size: 38rpx;
+  word-wrap: break-word;
+}
+
+.activity-time {
+  margin: 14rpx 0;
+}
+
+.activity-address {
+  margin-bottom: 14rpx
+}
+
+.activity-cost {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.price{
+  color: #F0C986;
+  font-size: 38rpx;
+}
+
+.lowercase {
+  font-size: 26rpx;
+}
+
+
+
+.bg-gray{
+  height: 66rpx;
+  line-height: 66rpx;
+  background-color: #EDEDED;
+  text-align: center;
+  color:#D3D3D3; 
+}

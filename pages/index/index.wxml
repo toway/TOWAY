@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="activities-wrap">
+<navigator url="/pages/details/details">
+
+  <view class="activity-item">
+    <view class="activity-top">
+      <view class="user-info">
+        <view class="avatar">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+          <view class="organizer">{{userInfo.nickName}}</view>
+          <view class="release-time">3小时前</view>
+        </view>
+        <view class="activity-status">
+          <button class="join" type="warn" size="mini">报名中</button>
+        </view>
+      </view>     
+    </view>  
+    
+    <view class="activity-content">
+      <view class="activity-show">
+      </view>
+      <view class="activity-right">
+        <view class="right-title public-font">与心灵清净独处\r|\r周末换种方式去旅行\r(3期)</view>
+        <view class="activity-time">
+          06月18日-06月19日
+        </view>
+        <view class="activity-address">
+          惠州市新兴县酒店大道889号
+        </view>
+        <view class="activity-cost public-font">
+          <text class="confirm-info">
+            <text class="price ">
+              ￥832<text class="lowercase">元/人</text></text>\r|\r<text class="confirm-people">有<text class="hasConfirmed">25</text>/60人报名</text>
+          </text>
+        </view>
+      </view>
+    </view>
+ 
+  </view>
+
+  <view class="activity-item">
+    <view class="activity-top">
+      <view class="user-info">
+        <view class="avatar">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view>
+          <view class="organizer">{{userInfo.nickName}}</view>
+          <view class="release-time">3小时前</view>
+        </view>
+        <view class="activity-status">
+          <button class="join" type="warn" size="mini">报名中</button>
+        </view>
+      </view>     
+    </view>  
+    
+    <view class="activity-content">
+      <view class="activity-show">
+      </view>
+      <view class="activity-right">
+        <view class="right-title public-font">与心灵清净独处\r|\r周末换种方式去旅行\r(3期)</view>
+        <view class="activity-time">
+          06月18日-06月19日
+        </view>
+        <view class="activity-address">
+          惠州市新兴县酒店大道889号
+        </view>
+        <view class="activity-cost public-font">
+          <text class="confirm-info">
+            <text class="price ">
+              ￥832<text class="lowercase">元/人</text></text>\r|\r<text class="confirm-people">有<text class="hasConfirmed">25</text>/60人报名</text>
+          </text>
+        </view>
+      </view>
+    </view> 
+  </view>
+
+  
+</navigator>
+  
+  <!--历史-->
+  <view class="bg-gray">
+    <text class="public-font">－ 历史 －</text>
+  </view>
+</view>
+
+<template name="priceandUser">
+    <text class="price ">￥832<text class="lowercase">元/人</text></text>\r|\r<text class="confirm-people" v-if="bothShow">有<text class="hasConfirmed">25</text>/60人报名</text>
+</template>    

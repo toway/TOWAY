@@ -1,0 +1,31 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.public-font{
+  font-family: '楷体';
+  font-weight: 600;
+}
+
+.gray-font{
+  color: #D3D3D3;
+}
+
+.public-border {
+  border-top: 3rpx solid #D3D3D3;
+}
+
+.confirm-people {
+  color: #D3D3D3;
+}
+
+.hasConfirmed {
+  color: #74AF9B;
+}

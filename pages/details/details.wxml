@@ -1,0 +1,78 @@
+<view class="details-wrap">
+    <view class="avatar">
+    </view>
+    <view class="organizer">霍达吉吉</view>
+    <view class="release-time">3小时前</view>
+    <view class="rect"></view>
+    <view class="activity-title public-font ">与心灵清净独处\r|\r周末换种方式去旅行\r(3期)</view>
+    <view class="activity-about public-border">
+        <view class="activity-time public-border public-font">06月18日-06月19日</view>
+        <view class="telphone  public-font">1388888888</view>
+        <view class="activity-cost public-font">
+            <text class="price ">￥832<text class="lowercase">元/人</text></text>
+        </view>
+        <view class="activity-address public-font">惠州市新兴县酒店大道889号</view>
+    </view>  
+</view>
+
+<view class="bg-gray"></view>
+
+<view class="second-wrap">
+    <view class="activity-title public-font">活动详情介绍</view>
+    <view class="rect"></view>
+    
+    <view class="detail-introduce">
+        <text class="public-font">去过泰国很多次 \n </text>
+         <text class="public-font">体验过曼谷的喧嚣 \n</text> 
+         <text class="public-font">享受过海岛的激情 \n</text> 
+         <text class="public-font">BUT \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         ... ...
+         <text class="public-font">享受过海岛的激情 \n</text>
+
+         <view class="view-insert"></view>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
+    </view>
+</view>
+
+<view class="bg-gray"></view>
+
+<view class="third-wrap">
+    <view class="activity-title public-font">报名人数</view>
+    <view class="rect"></view>
+    <text class="confirm-people public-font"><text class="hasConfirmed">25</text>/60人报名</text>
+
+    <view class="users">
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+        <view class='user'></view>
+    </view>
+</view>
+
+<view class="bg-gray"></view>
+
+<view class="bottom">
+    <import src="/pages/template/PriceAndUser/PriceAndUser.wxml" />
+    <template is="priceandUser" data="{{bothShow: false}}"></template>
+    <button type="warn" size="mini">报名</button>
+</view>

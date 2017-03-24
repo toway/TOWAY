@@ -1,0 +1,13 @@
+.activity-cost {
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.price{
+  color: #F0C986;
+  font-size: 38rpx;
+}
+
+.lowercase {
+  font-size: 26rpx;
+}
