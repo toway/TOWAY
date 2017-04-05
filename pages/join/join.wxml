@@ -1,0 +1,16 @@
+<view class="join">
+    <view class="title">
+        请完善一下信息
+    </view>    
+
+    <view class="classname">
+        <input placeholder="姓名" type="text" class="name"/>
+        <hr />  
+        <input placeholder="手机号码" type="text" class="name"/>
+        
+        
+    </view>
+    <view class="bottom-button">
+        <button class="" type="primary">提交报名</button>
+    </view>
+</view>

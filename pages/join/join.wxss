@@ -1,0 +1,36 @@
+
+.join {
+    background-color: #EFEFEF;
+    height: 100vh;
+
+}
+.title{
+    height: 64rpx;
+    line-height: 64rpx;
+    font-size: .8rem;
+    color: #CBCBCB;
+    padding: 0 24rpx;
+}
+.name {
+    padding: 16rpx 0 16rpx 38rpx;
+    font-size: .8rem;
+    display: block;
+    background-color: #fff;
+    border: 2rpx solid #eee;
+    
+}
+hr{
+    /*margin-left: 16rpx; */
+    width: 80%;
+    display: block;
+}
+
+.bottom-button{
+    position: absolute;
+    bottom: 8vh;
+    width: 86%;
+    left: 7%;
+
+    color: #fff;
+    background-color: #fff;
+}

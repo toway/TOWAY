@@ -1,7 +1,7 @@
 {
   "pages":[
-
-   
+    "pages/release/release",
+    "pages/join/join",
     "pages/index/index",
     "pages/details/details"
   ],

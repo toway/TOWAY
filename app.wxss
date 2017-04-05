@@ -29,3 +29,15 @@
 .hasConfirmed {
   color: #74AF9B;
 }
+
+.p-abscenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-vcenter{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+}

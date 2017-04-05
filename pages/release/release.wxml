@@ -1,0 +1,56 @@
+<view class="release">
+    <view class="classname">
+        <input placeholder="在这里输入活动标题" type="text" class="name"/>
+        <hr />  
+        <textarea placeholder="在这里输入活动详情" />
+        <text class="p-abscenter add-img">添加活动图片</text>       
+    </view>
+
+    <view class="begin-time info" bindtap="chooseTime">
+        <text class="left">开始时间</text>
+        
+        <picker  mode="date" value="{{beginDate.date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange(e,'beginDate')">
+    <view class="picker">
+        <text class=" p-vcenter">{{beginDate.date}}</text>
+    </view>
+  </picker>
+
+  <picker mode="time" class="right p-vcenter" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange(e,'beginDate')">
+    <view class="picker">
+       {{beginDate.time}}
+    </view>
+  </picker>
+
+  <!--<view class="section">
+  <view class="section__title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>-->
+    </view>
+    <view class="end-time info">
+        <text>结束时间</text>
+        <text class="right p-vcenter">06月18日(周六)09:30</text>
+    </view>
+    <view class="end-time info">
+        <text>报名截止</text>
+        <text class="right p-vcenter">06月18日(周六)09:30</text>
+    </view>
+    <view class="p-vcenter info">
+        <text>活动地点</text>
+        <input class="right p-vcenter" type="text" placeholder="输入活动地址" />
+    </view>
+    <view class="end-time info">
+        <text>人数限制</text>
+        <text class="right p-vcenter">无限制</text>
+    </view>
+    <view class="end-time info">
+        <text>组织者电话</text>
+        <text class="right p-vcenter">06月18日(周六)09:30</text>
+    </view>
+    <view class="p-vcenter info">
+        <view class="confirm" type="primary">活动费用</view>
+    </view>
+</view>

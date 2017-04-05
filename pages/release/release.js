@@ -1,39 +1,39 @@
-// var util= require('../../util/util');
-// var Page = new util.Page({
-//   Wdgs: [iconList.Wdg]
-// });
-
 Page({
   data:{
-    String1
+    beginDate: {
+        date: '2016-09-01',
+        time: '12:01'
+    },
+    endDate: '2017-4-6',
+    untilDate: ''
   },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
-    String2
+   
   },
   onReady:function(){
     // 生命周期函数--监听页面初次渲染完成
-    String3
+    
   },
   onShow:function(){
     // 生命周期函数--监听页面显示
-    String4
+    
   },
   onHide:function(){
     // 生命周期函数--监听页面隐藏
-    String5
+    
   },
   onUnload:function(){
     // 生命周期函数--监听页面卸载
-    String6
+    
   },
   onPullDownRefresh: function() {
     // 页面相关事件处理函数--监听用户下拉动作
-    String7
+    
   },
   onReachBottom: function() {
     // 页面上拉触底事件的处理函数
-    String8
+    
   },
   onShareAppMessage: function() {
     // 用户点击右上角分享
@@ -43,19 +43,18 @@ Page({
       path: 'path' // 分享路径
     }
   },
-  join(){
-      console.log('ddd')
-      wx.navigateTo({
-        url: 'pages/join/join',
-        success: function(res){
-          // success
-        },
-        fail: function(res) {
-          // fail
-        },
-        complete: function(res) {
-          // complete
-        }
-      })
-  }
+  bindPickerChange: function(time) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
+  },
+  bindDateChange: function(e, date) {
+      console.log(e)
+      this.beginDate[date] =  e.detail.value;
+      console.log(this.beginDate[date])
+    this.setData({
+      
+    })
+  },
 })

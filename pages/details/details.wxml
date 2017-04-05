@@ -74,5 +74,5 @@
 <view class="bottom">
     <import src="/pages/template/PriceAndUser/PriceAndUser.wxml" />
     <template is="priceandUser" data="{{bothShow: false}}"></template>
-    <button type="warn" size="mini">报名</button>
+    <button type="warn" size="mini" bindtap="join">报名</button>
 </view>
