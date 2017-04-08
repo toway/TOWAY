@@ -1,0 +1,18 @@
+<view class="details-wrap">
+    <view class="avatar">
+      <image src="/images/icon.png" mode="scaleTo"/>
+    </view>
+    <view class="organizer">霍达吉吉</view>
+    <view class="rect"></view>
+    <view class=" ">
+
+    </view>
+    <view class="">
+        <view class="activity-time public-border public-font">06月18日-06月19日</view>
+        <view class="telphone  public-font">1388888888</view>
+        <view class="activity-cost public-font">
+            <text class="price ">￥832<text class="lowercase">元/人</text></text>
+        </view>
+        <view class="activity-address public-font">惠州市新兴县酒店大道889号</view>
+    </view>
+</view>

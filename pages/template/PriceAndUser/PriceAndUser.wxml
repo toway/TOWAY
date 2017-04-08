@@ -1,3 +1,4 @@
 <template name="priceandUser" >
-    <text class="price public-font">￥832<text class="lowercase">元/人</text></text>\r|\r<text class="confirm-people" v-if="bothShow">有<text class="hasConfirmed public-font">25</text>/60人报名</text>
-</template>    
+    <text class="price public-font" style="color:{{color}}">￥{{price}}<text class="lowercase">元/人</text></text>
+    <text class="confirm-people" wx:if="{{bothShow}}">\r|\r有<text class="hasConfirmed public-font">{{has}}</text>/{{all}}人报名</text>
+</template>

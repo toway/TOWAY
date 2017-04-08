@@ -1,7 +1,7 @@
 
 .release {
     background-color: #EFEFEF;
-    height: 100vh;
+
 }
 .release view{
     background-color: #fff;
@@ -13,7 +13,7 @@
     display: block;
     background-color: #fff;
     border: 2rpx solid #eee;
-    
+
 }
 textarea{
     height: 200rpx;
@@ -25,36 +25,91 @@ textarea{
     color: #08A261;
     height: 80rpx;
 }
+.img-choose image{
+  display: inline-block;
+  width: 33%;
+  box-sizing: border-box;
+  /*padding: 16rpx;*/
+}
+.marginT{
+  margin-top: 16rpx;
+}
 .info {
     height: 108rpx;
     line-height: 108rpx;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #D3D3D3;
     padding: 0 38rpx;
-    box-shadow:0px -1px 0px 0px #e6e6e6, 0px 1px 0px 0px #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    /*box-shadow:0px -1px 0px 0px #e6e6e6, 0px 1px 0px 0px #e6e6e6;*/
+}
+.picktime{
+  border-bottom: 1px solid #D3D3D3;
+  width: 60%;
+  display: inline-block;
 }
 picker{
-    width: 35%;
+    width: 50%;
+    /*height: 100;*/
+    /*float: right;*/
     display: inline-block;
-    /*box-shadow:0px -1px 0px 0px #e6e6e6, 0px 1px 0px 0px #e6e6e6;*/
+    box-shadow:0px -1px 0px 0px #e6e6e6, 0px 1px 0px 0px #e6e6e6;
     border-bottom: 1px solid;
+    border-bottom: 1px solid #D3D3D3;
     box-sizing: border-box;
 }
 .left{
     float: left;
 }
 .right{
-    float: right;   
+    float: right;
+    width: 70%;
+    box-shadow:0px -1px 0px 0px #e6e6e6, 0px 1px 0px 0px #e6e6e6;
 }
-.right::after{
-    
+.picker::after{
+
     content: '';
-    margin-left: 16rpx;
+    margin-left: 3rpx;
+    position: absolute;
+    right: 8rpx;
+    top: 48rpx;
     width: 4px;
     height: 4px;
     color: #030303;
     border-style: solid;
     transform: rotate(-45deg);
     border-width: 0 2px 2px 0;
-    float: right;
+    /*float: right;*/
+}
+.body-view{
+  padding: 24rpx 38rpx;
+  line-height: 68rpx;
+
+}
+.has-infos{
+  padding: 38rpx 38rpx;
+}
+.user-tag{
+  display: inline-block;
+  padding: 16rpx 32rpx;
+  color: #fff;
+  margin-right: 32rpx;
+  margin-bottom: 32rpx;
+  border-radius: 86rpx;
+  background: #E0E0E0;
+}
+.user-tag-active{
+  background-color: #09A260;
+}
+.confirm{
+  height: 108rpx;
+}
+.confirm button{
+  width: 80%;
+  height: 75%;
+  background-color: #09A260;
 }
 .bottom-button{
     position: absolute;

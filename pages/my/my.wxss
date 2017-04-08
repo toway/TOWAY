@@ -1,0 +1,24 @@
+.details-wrap {
+    padding: 18rpx;
+    box-sizing: border-box;
+}
+.avatar {
+  margin: 20rpx auto 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  /*background-image: url('/images/icon.png');*/
+  background-size: cover;
+  background-position: center center;
+}
+.avatar image{
+  height: 100%;
+  width: 100%;
+}
+.organizer {
+  color: #D3D3D3;
+  font-family: '楷体';
+  font-weight: 800;
+  text-align: center;
+  margin: 6rpx 0 10rpx;
+}

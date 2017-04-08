@@ -1,18 +1,24 @@
 {
     "navigationBarTitleText": "TOWAY",
-    "activity": [
-        {
-            "avatarUrl":"http://wx.qlogo.cn/mmhead/PiajxSqBRaEKGeRlicDnVvhLZj30ibYYWz5qib0EnFWtpZ8BJJMs4ANRFg/132",
-            "nickname":"Lemon~~",
-            "beforeTime": "3小时前",
-            "status": "报名中" ,
-            "title": "与心灵清净独处\r|\r周末换种方式去旅行\r(3期)",
-            "duringTime":"06月18日-06月19日",
-            "address": "惠州市新兴县酒店大道889号",
-            "price": "832",
-            "joinNum": "25",
-            "limitNum": "60"
-        }
-    ]
-    
+    "tabBar": {
+      "color": "#9B9DB1",
+      "selectedColor": "#3cc51f",
+      "borderStyle": "black",
+      "backgroundColor": "#ffffff",
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "images/tab_message_normal.png",
+        "selectedIconPath": "images/tab_message_selected.png"
+      },{
+        "pagePath": "pages/release/release",
+        "iconPath": "images/tab_dynamic_normal.png",
+        "selectedIconPath": "images/tab_dynamic_normal.png"
+      },{
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tab_contact_normal.png",
+        "selectedIconPath": "images/tab_contact_selected.png"
+      }]
+    }
 }

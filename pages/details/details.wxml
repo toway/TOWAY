@@ -12,7 +12,7 @@
             <text class="price ">￥832<text class="lowercase">元/人</text></text>
         </view>
         <view class="activity-address public-font">惠州市新兴县酒店大道889号</view>
-    </view>  
+    </view>
 </view>
 
 <view class="bg-gray"></view>
@@ -20,11 +20,11 @@
 <view class="second-wrap">
     <view class="activity-title public-font">活动详情介绍</view>
     <view class="rect"></view>
-    
+
     <view class="detail-introduce">
         <text class="public-font">去过泰国很多次 \n </text>
-         <text class="public-font">体验过曼谷的喧嚣 \n</text> 
-         <text class="public-font">享受过海岛的激情 \n</text> 
+         <text class="public-font">体验过曼谷的喧嚣 \n</text>
+         <text class="public-font">享受过海岛的激情 \n</text>
          <text class="public-font">BUT \n</text>
          <text class="public-font">享受过海岛的激情 \n</text>
          <text class="public-font">享受过海岛的激情 \n</text>
@@ -36,7 +36,10 @@
          ... ...
          <text class="public-font">享受过海岛的激情 \n</text>
 
-         <view class="view-insert"></view>
+         <view class="view-insert">
+           <image mode="scaleToFit" src="http://p5.qhimg.com/t01f4229190a609af43.png"/>
+           
+         </view>
          <text class="public-font">享受过海岛的激情 \n</text>
          <text class="public-font">享受过海岛的激情 \n</text>
          <text class="public-font">享受过海岛的激情 \n</text>
@@ -51,21 +54,7 @@
     <text class="confirm-people public-font"><text class="hasConfirmed">25</text>/60人报名</text>
 
     <view class="users">
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
-        <view class='user'></view>
+        <view class='user' wx:for="{{userList}}" wx:key="{{user}}"></view>
     </view>
 </view>
 
@@ -73,6 +62,6 @@
 
 <view class="bottom">
     <import src="/pages/template/PriceAndUser/PriceAndUser.wxml" />
-    <template is="priceandUser" data="{{bothShow: false}}"></template>
-    <button type="warn" size="mini" bindtap="join">报名</button>
+    <template is="priceandUser" data="{{bothShow: false, color: '#F4AC35', price: 867}}"></template>
+    <button type="{{type}}" size="mini" bindtap="join" disabled="{{user.btnDisabled}}">{{user.btnMessage}}</button>
 </view>

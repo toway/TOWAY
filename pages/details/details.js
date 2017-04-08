@@ -5,57 +5,91 @@
 
 Page({
   data:{
-    String1
+    userList:[{
+      username:''
+    },{
+      username:''
+    },],
+    user:{
+      role: 1, // 活动者 1 ,发布者 2
+      status:"join", //1--join:报名 joined 已报名 finished: 已结束 ; 2 -- deleted:删除
+      // btnMessage: '我要报名'
+    },
+    type:''
+
   },
-  onLoad:function(options){
-    // 生命周期函数--监听页面加载
-    String2
+  onLoad(options){
+    console.log(options)
   },
-  onReady:function(){
-    // 生命周期函数--监听页面初次渲染完成
-    String3
-  },
-  onShow:function(){
-    // 生命周期函数--监听页面显示
-    String4
-  },
-  onHide:function(){
-    // 生命周期函数--监听页面隐藏
-    String5
-  },
-  onUnload:function(){
-    // 生命周期函数--监听页面卸载
-    String6
-  },
-  onPullDownRefresh: function() {
-    // 页面相关事件处理函数--监听用户下拉动作
-    String7
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
-    String8
+  onReady(){
+
+    const status = this.data.user.status
+    if ( status == 'join' || status == 'joined') {
+      this.setData({
+        type: 'primary',
+        'user.btnMessage': status == 'join'? '我要报名' : '已报名'
+      })
+    }
+    if (status == 'finished') {
+      this.setData({
+        type: 'default',
+        'user.btnMessage': '已结束',
+        'user.btnDisabled': 'disabled'
+      })
+    }
+    if (status == 'deleted') {
+      this.setData({
+        type: 'warn',
+        'user.btnMessage': '删除'
+      })
+    }
   },
   onShareAppMessage: function() {
     // 用户点击右上角分享
     return {
-      title: 'title', // 分享标题
+      title: 'toway', // 分享标题
       desc: 'desc', // 分享描述
-      path: 'path' // 分享路径
+      path: '/pages/index/index' // 分享路径
     }
   },
-  join(){
-      console.log('ddd')
-      wx.navigateTo({
-        url: 'pages/join/join',
-        success: function(res){
-          // success
-        },
-        fail: function(res) {
-          // fail
-        },
-        complete: function(res) {
-          // complete
+  join:function(){
+    const status = this.data.user.status
+    if (status == 'join') {
+      wx.login({
+        success(res){
+          if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: 'https://test.com/onLogin',
+            data: {
+              code: res.code
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+
+          wx.navigateTo({
+            url: '../join/join',
+
+          })
         }
       })
+
+    }
+
+    if (status == 'deleted') {
+      wx.showModal({
+        content: '尊的要删除发布的活动吗?\n我觉得还可以挽救一下',
+        cancelText: '手抖点错',
+        confirmText: '删除',
+        confirmColor: '',
+
+        success(res){
+          if(res.confirm) console.log('confirm')
+        }
+      })
+    }
+
   }
 })

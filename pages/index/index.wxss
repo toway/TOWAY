@@ -64,10 +64,13 @@
 .activity-show {
   width: 35%;
   height: 250rpx;
-  background-image: url('/images/activity-show.png');
+  /*background-image: url('/images/activity-show.png');*/
   margin-right: 16rpx;
 }
-
+.activity-show image{
+  height: 100%;
+  width: 100%;
+}
 .right-title{
   font-size: 38rpx;
   word-wrap: break-word;
@@ -102,5 +105,5 @@
   line-height: 66rpx;
   background-color: #EDEDED;
   text-align: center;
-  color:#D3D3D3; 
+  color:#D3D3D3;
 }

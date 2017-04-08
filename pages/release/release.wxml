@@ -1,46 +1,68 @@
 <view class="release">
     <view class="classname">
         <input placeholder="在这里输入活动标题" type="text" class="name"/>
-        <hr />  
+        <hr />
         <textarea placeholder="在这里输入活动详情" />
-        <text class="p-abscenter add-img">添加活动图片</text>       
+        <text class="p-abscenter add-img" bindtap="chooseImg">添加活动图片</text>
+        <view class="img-choose">
+          <image src="{{item}}" wx:for="{{tempPath}}" wx:key="{{i}}"/>
+        </view>
     </view>
 
-    <view class="begin-time info" bindtap="chooseTime">
+    <view class="begin-time info marginT" >
         <text class="left">开始时间</text>
-        
-        <picker  mode="date" value="{{beginDate.date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange(e,'beginDate')">
-    <view class="picker">
-        <text class=" p-vcenter">{{beginDate.date}}</text>
-    </view>
-  </picker>
+        <view class="picktime p-vcenter">
+          <picker  mode="date" value="{{picker[0].date}}" start="2015-09-01" end="2017-09-01" data-index="0" bindchange="bindDateChange">
+            <view class="picker">
+              {{picker[0].date}}
+                <!-- <text class=" p-vcenter"></text> -->
+            </view>
+          </picker>
 
-  <picker mode="time" class="right p-vcenter" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange(e,'beginDate')">
-    <view class="picker">
-       {{beginDate.time}}
-    </view>
-  </picker>
-
-  <!--<view class="section">
-  <view class="section__title">时间选择器</view>
-  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view class="picker">
-      当前选择: {{time}}
-    </view>
-  </picker>
-</view>-->
+          <picker mode="time"  class="trangle" value="{{picker[0].time}}" start="09:01" end="21:01" data-index="0" bindchange="bindTimeChange">
+            <view class="picker">
+               {{picker[0].time}}
+            </view>
+          </picker>
+        </view>
     </view>
     <view class="end-time info">
         <text>结束时间</text>
-        <text class="right p-vcenter">06月18日(周六)09:30</text>
+
+        <view class="picktime">
+          <picker  mode="date" value="{{picker[1].date}}" start="2015-09-01" end="2017-09-01" data-index="1" bindchange="bindDateChange">
+            <view class="picker">
+              {{picker[1].date}}
+                <!-- <text class=" p-vcenter"></text> -->
+            </view>
+          </picker>
+
+          <picker mode="time"  value="{{picker[1].time}}" start="09:01" end="21:01" data-index="1" bindchange="bindTimeChange">
+            <view class="picker">
+               {{picker[1].time}}
+            </view>
+          </picker>
+        </view>
     </view>
     <view class="end-time info">
         <text>报名截止</text>
-        <text class="right p-vcenter">06月18日(周六)09:30</text>
+        <view class="picktime">
+          <picker  mode="date" value="{{picker[2].date}}" start="2015-09-01" end="2017-09-01" data-index="2" bindchange="bindDateChange">
+            <view class="picker">
+              {{picker[2].date}}
+            </view>
+          </picker>
+
+          <picker  mode="time"  value="{{picker[2].time}}" start="09:01" end="21:01" data-index="2" bindchange="bindTimeChange">
+            <view class="picker">
+               {{picker[2].time}}
+            </view>
+          </picker>
+        </view>
     </view>
-    <view class="p-vcenter info">
+    <view class="p-vcenter info marginT">
         <text>活动地点</text>
-        <input class="right p-vcenter" type="text" placeholder="输入活动地址" />
+        <input class=" p-vcenter" type="text" placeholder="输入活动地址" />
     </view>
     <view class="end-time info">
         <text>人数限制</text>
@@ -50,7 +72,25 @@
         <text>组织者电话</text>
         <text class="right p-vcenter">06月18日(周六)09:30</text>
     </view>
-    <view class="p-vcenter info">
+    <!-- 活动费用 -->
+    <view class="p-vcenter info marginT">
         <view class="confirm" type="primary">活动费用</view>
+        <input placeholder="在这里输入活动费用" type="text" class=""/>
+    </view>
+
+    <view class=" marginT">
+        <view class="body-view p-clearfix">
+          <text class="p-fll">用户报名必填项</text>
+          <switch class="p-flr" checked bindchange="switch1Change"/>
+        </view>
+
+        <view class="has-infos">
+          <text class="user-tag user-tag-active" wx:key="i" class="{{item.choose==true?'user-tag user-tag-active':'user-tag'}}" data-index = "{{index}}" bindtap="chooseInfo" wx:for="{{userTags}}">{{item.tagname}}</text>
+
+        </view>
+    </view>
+
+    <view class="confirm marginT p-abscenter">
+      <button class="p-cfff p-abscenter">确认发布</button>
     </view>
 </view>
