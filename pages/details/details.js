@@ -13,7 +13,7 @@ Page({
     user:{
       role: 1, // 活动者 1 ,发布者 2
       status:"join", //1--join:报名 joined 已报名 finished: 已结束 ; 2 -- deleted:删除
-      // btnMessage: '我要报名'
+      btnMessage: '我要报名'
     },
     type:''
 
