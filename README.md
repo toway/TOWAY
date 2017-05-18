@@ -28,7 +28,7 @@ code
 ```
 1. index 首页服务端返回数据
 
-请求方式 | GET | 无参数
+请求方式 | GET |
 ------------ | ---------------- | ------------
 路径 | pages/index/index  |
 活动状态 | status.type  |
@@ -64,7 +64,7 @@ type: | doing  |  //活动报名中
 ---
 2. details 详情页数据请求
 
-请求方式 | GET |  id
+请求方式 | GET |
 ------------ | ---------------- 
 请求条件  | id = 1
 路径 | pages/details/details  
