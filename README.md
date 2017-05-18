@@ -64,7 +64,7 @@ type: | doing  |  //活动报名中
 ---
 2. details 详情页数据请求
 
-请求方式 | GET |
+请求方式 | GET |  id
 ------------ | ---------------- 
 请求条件  | id = 1
 路径 | pages/details/details  
