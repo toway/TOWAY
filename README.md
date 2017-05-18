@@ -65,13 +65,13 @@ type: | doing  |  //活动报名中
 2. details 详情页数据请求
 
 请求方式 | GET |
------------- | ----------------
-请求条件  | id = 1
-路径 | pages/details/details  
-角色: | user.role
+------------ | ---------------- | ------
+请求条件  | id = 1  |
+路径 | pages/details/details    |
+角色: | user.role |
 role: | 1 | 活动者
 role: | 2 | 发布者
-活动状态信息: | user.status
+活动状态信息: | user.status |
 status: |  join | 报名(活动者)
 status:    | joined | 已报名(活动者)
 status:    | finished | 已结束(活动者)
